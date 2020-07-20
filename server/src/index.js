@@ -9,8 +9,14 @@ app.use(helmet());
 app.use(
   cors({
     origin: 'http://localhost:3000',
-  })
+  }),
 );
+
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Hello World!',
+  });
+});
 
 const PORT = process.env.PORT || 5000;
 
