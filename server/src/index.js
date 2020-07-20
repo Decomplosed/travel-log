@@ -4,6 +4,7 @@ const helmet = require('helmet');
 
 const app = express();
 app.use(morgan('common'));
+app.use(helmet());
 
 const PORT = process.env.PORT || 5000;
 
