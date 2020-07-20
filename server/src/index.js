@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 app.use(morgan('common'));
 app.use(helmet());
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 
