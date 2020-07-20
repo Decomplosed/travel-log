@@ -24,6 +24,11 @@ app.use((req, res, next) => {
   next(error);
 });
 
+app.use((error, req, res, next) => {
+  const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+  res.status(statusCode);
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
