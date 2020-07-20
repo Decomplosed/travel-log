@@ -18,7 +18,9 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use((req, res, next) => {})
+app.use((req, res, next) => {
+  const error = new Error(`Not found - ${req.originalUrl}`);
+});
 
 const PORT = process.env.PORT || 5000;
 
