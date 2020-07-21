@@ -23,4 +23,5 @@ const logEntrySchema = new Schema({
   },
   latitude: requiredNumber,
   longitude: requiredNumber,
+  created_at: { type: Date, default: Date.now },
 });
