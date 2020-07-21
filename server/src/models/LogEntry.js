@@ -8,9 +8,10 @@ const requiredNumber = {
 };
 
 const defaultDate = {
-  type: Date, default: Date.now,
-}
-;
+  type: Date,
+  default: Date.now,
+};
+
 const logEntrySchema = new Schema({
   title: {
     type: String,
@@ -27,5 +28,5 @@ const logEntrySchema = new Schema({
   },
   latitude: requiredNumber,
   longitude: requiredNumber,
-  created_at: { type: Date, default: Date.now },
+  created_at: defaultDate,
 });
