@@ -2,15 +2,14 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
-const requiredString = {
-  type: String,
-  required: true,
-};
-
 const logEntrySchema = new Schema({
-  title: requiredString,
+  title: {
+    type: String,
+    required: true,
+  },
   description: String,
   comments: String,
+  image: String,
   rating: {
     type: Number,
     min: 0,
