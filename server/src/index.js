@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.use(middlewares.notFound);
 
-app.use();
+app.use(middlewares.errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
