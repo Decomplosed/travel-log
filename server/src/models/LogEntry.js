@@ -29,6 +29,10 @@ const logEntrySchema = new Schema({
   },
   latitude: requiredNumber,
   longitude: requiredNumber,
+  visitDate: {
+    required: true,
+    type: Date,
+  },
   created_at: defaultRequiredDate,
   updated_at: defaultRequiredDate,
 });
