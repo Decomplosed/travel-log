@@ -7,6 +7,10 @@ const requiredNumber = {
   required: true,
 };
 
+const defaultDate = {
+  type: Date, default: Date.now,
+}
+;
 const logEntrySchema = new Schema({
   title: {
     type: String,
