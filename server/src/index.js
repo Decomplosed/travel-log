@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use();
+app.use(middlewares.notFound);
 
 app.use();
 
