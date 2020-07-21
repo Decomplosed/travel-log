@@ -33,3 +33,5 @@ const logEntrySchema = new Schema(
     timestamps: true,
   },
 );
+
+module.exports = logEntrySchema;
