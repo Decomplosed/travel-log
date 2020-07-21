@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const requiredNumber = {
   type: Number,
   required: true,
-}
+};
 
 const logEntrySchema = new Schema({
   title: {
@@ -22,4 +22,5 @@ const logEntrySchema = new Schema({
     default: 0,
   },
   latitude: requiredNumber,
+  longitude: requiredNumber,
 });
