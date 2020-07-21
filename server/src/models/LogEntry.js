@@ -7,7 +7,7 @@ const requiredNumber = {
   required: true,
 };
 
-const defaultDate = {
+const defaultRequiredDate = {
   type: Date,
   default: Date.now,
 };
@@ -28,6 +28,6 @@ const logEntrySchema = new Schema({
   },
   latitude: requiredNumber,
   longitude: requiredNumber,
-  created_at: defaultDate,
-  updated_at: defaultDate,
+  created_at: defaultRequiredDate,
+  updated_at: defaultRequiredDate,
 });
