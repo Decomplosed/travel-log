@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 
 app.use();
 
-// eslint-disable-next-line no-unused-vars
 app.use();
 
 const PORT = process.env.PORT || 5000;
