@@ -7,6 +7,9 @@ const mongoose = require('mongoose');
 const middlewares = require('./middlewares');
 
 const app = express();
+
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+
 app.use(morgan('common'));
 app.use(helmet());
 app.use(
