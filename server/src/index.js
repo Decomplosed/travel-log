@@ -4,6 +4,8 @@ const helmet = require('helmet');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+require('dotenv').config();
+
 const middlewares = require('./middlewares');
 
 const app = express();
