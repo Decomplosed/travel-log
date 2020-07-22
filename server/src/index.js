@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
   });
 });
 
+app.use('/api/logs', logs);
+
 app.use(middlewares.notFound);
 
 app.use(middlewares.errorHandler);
