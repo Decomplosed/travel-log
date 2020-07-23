@@ -40,5 +40,5 @@ app.use(middlewares.errorHandler);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Listening at port: ${PORT}`);
+  console.log(`Backend runs in ${process.env.NODE_ENV} mode on port: ${PORT}`);
 });
