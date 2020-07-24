@@ -17,6 +17,9 @@ router.post('/', async (req, res, next) => {
     res.json(createdEntry);
   } catch (error) {
     console.log(error.constructor.name);
+    if (error.name === 'ValidationError') {
+      res.status(422);
+    }
     next(error);
   }
 });
