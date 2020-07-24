@@ -11,6 +11,11 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+  try {
+    
+  } catch (error) {
+
+  }
   const logEntry = new LogEntry(req.body);
   console.log(req.body);
 });
