@@ -15,7 +15,9 @@ router.post('/', async (req, res, next) => {
     const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
     res.json(createdEntry);
-  } catch (error) {}
+  } catch (error) {
+    next(error);
+  }
 
   console.log(req.body);
 });
