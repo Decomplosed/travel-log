@@ -16,10 +16,9 @@ router.post('/', async (req, res, next) => {
     const createdEntry = await logEntry.save();
     res.json(createdEntry);
   } catch (error) {
+    console.log(error.constructor.name);
     next(error);
   }
-
-  console.log(req.body);
 });
 
 module.exports = router;
