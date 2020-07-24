@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const logEntry = new LogEntry(req.body);
+    const createdEntry = await logEntry.save()
   } catch (error) {}
 
   console.log(req.body);
