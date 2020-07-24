@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
   try {
     const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
