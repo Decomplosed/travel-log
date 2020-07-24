@@ -13,7 +13,8 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const logEntry = new LogEntry(req.body);
-    const createdEntry = await logEntry.save()
+    const createdEntry = await logEntry.save();
+    res.json(createdEntry);
   } catch (error) {}
 
   console.log(req.body);
