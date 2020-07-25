@@ -5,6 +5,10 @@ const LogEntry = require('../models/LogEntry');
 const router = Router();
 
 router.get('/', async (req, res) => {
+  try {
+ catch (error) {
+
+  }
   const entries = await LogEntry.find();
   res.json(entries);
 });
