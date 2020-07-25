@@ -10,7 +10,13 @@ const App = () => {
     zoom: 8,
   });
 
-  return <ReactMapGL {...viewport} onViewportChange={setViewport} mapboxApiAccessToken={} />;
+  return (
+    <ReactMapGL
+      {...viewport}
+      onViewportChange={setViewport}
+      mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
+    />
+  );
 };
 
 export default App;
