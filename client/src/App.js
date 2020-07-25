@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactMapGL from 'react-map-gl'
 
 const App = () => {
   const [viewport, setViewport] = useState({
