@@ -6,11 +6,11 @@ const router = Router();
 
 router.get('/', async (req, res) => {
   try {
+    const entries = await LogEntry.find();
+    res.json(entries);
  catch (error) {
 
   }
-  const entries = await LogEntry.find();
-  res.json(entries);
 });
 
 router.post('/', async (req, res, next) => {
