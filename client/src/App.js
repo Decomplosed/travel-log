@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 
 const App = () => {
-  return <div className='App'>Hello</div>;
+  const [viewport, setViewport] = useState({
+    width: 400,
+    heigh: 400,
+    latitude: 37.7577,
+    longitude: -122.4376,
+    zoom: 8,
+  });
 };
 
 export default App;
