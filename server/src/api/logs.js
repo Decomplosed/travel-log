@@ -4,11 +4,7 @@ const LogEntry = require('../models/LogEntry');
 
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.json({
-    message: 'root route',
-  });
-});
+router.get('/', async (req, res) => {});
 
 router.post('/', async (req, res, next) => {
   try {
