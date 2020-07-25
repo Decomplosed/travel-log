@@ -9,6 +9,8 @@ const App = () => {
     longitude: -122.4376,
     zoom: 8,
   });
+
+  return <ReactMapGL {...viewport} onViewportChange={setViewport} />;
 };
 
 export default App;
