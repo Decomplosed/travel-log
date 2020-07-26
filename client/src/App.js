@@ -14,8 +14,9 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const logEntries = await listLogEntries()
-    })()
+      const logEntries = await listLogEntries();
+      console.log(logEntries);
+    })();
   }, []);
 
   return (
