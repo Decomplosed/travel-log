@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactMapGL from 'react-map-gl';
 
+import { listLogEntries } from './API';
+
 const App = () => {
   const [viewport, setViewport] = useState({
     width: '100vw',
