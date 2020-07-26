@@ -13,8 +13,10 @@ const App = () => {
   });
 
   useEffect(() => {
-
-  }, [])
+    (async () => {
+      const logEntries = await listLogEntries()
+    })()
+  }, []);
 
   return (
     <ReactMapGL
