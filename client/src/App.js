@@ -10,6 +10,10 @@ const App = () => {
     zoom: 4,
   });
 
+  useEffect(() => {
+
+  }, [])
+
   return (
     <ReactMapGL
       {...viewport}
