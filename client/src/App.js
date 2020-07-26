@@ -15,6 +15,7 @@ const App = () => {
       {...viewport}
       onViewportChange={setViewport}
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
+      mapStyle='mapbox://styles/decomplosed/ckd3k91gq05ec1iqe5yewo0b9'
     />
   );
 };
