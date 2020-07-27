@@ -4,7 +4,7 @@ import ReactMapGL from 'react-map-gl';
 import { listLogEntries } from './API';
 
 const App = () => {
-  const [logEntries, setLogEntries] = useState([])
+  const [logEntries, setLogEntries] = useState([]);
   const [viewport, setViewport] = useState({
     width: '100vw',
     height: '100vh',
