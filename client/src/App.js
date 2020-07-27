@@ -27,7 +27,9 @@ const App = () => {
       mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_API_KEY}
       mapStyle='mapbox://styles/decomplosed/ckd3k91gq05ec1iqe5yewo0b9'
     >
-      {logEntries.map(entry => ())}
+      {logEntries.map((entry) => (
+        <Marker latitude={entry.latitude} longitude={entry.longitude} offsetLeft={-20} offsetTop={-10}></Marker>
+      ))}
     </ReactMapGL>
   );
 };
