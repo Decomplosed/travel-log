@@ -29,6 +29,7 @@ const App = () => {
     >
       {logEntries.map((entry) => (
         <Marker
+          key={entry._id}
           latitude={entry.latitude}
           longitude={entry.longitude}
           offsetLeft={-20}
