@@ -37,7 +37,7 @@ const App = () => {
           offsetLeft={-20}
           offsetTop={-10}
         >
-          <div>{entry.title}</div>
+          <PinIcon />
         </Marker>
       ))}
     </ReactMapGL>
