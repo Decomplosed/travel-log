@@ -16,6 +16,7 @@ const App = () => {
   useEffect(() => {
     (async () => {
       const logEntries = await listLogEntries();
+      setLogEntries(logEntries);
       console.log(logEntries);
     })();
   }, []);
