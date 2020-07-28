@@ -39,6 +39,10 @@ const App = () => {
         >
           <svg
             className='marker'
+            style={{
+              width: '24px',
+              height: '24px',
+            }}
             viewBox='0 0 24 24'
             fill='none'
             stroke='#179ad9'
