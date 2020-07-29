@@ -42,7 +42,7 @@ const App = () => {
               className='marker'
               style={{
                 width: `calc(1vmin * ${viewport.zoom})`,
-                height: '24px',
+                height: `calc(1vmin * ${viewport.zoom})`,
               }}
               viewBox='0 0 24 24'
               fill='none'
