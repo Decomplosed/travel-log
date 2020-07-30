@@ -41,8 +41,8 @@ const App = () => {
             <svg
               className='marker'
               style={{
-                width: `calc(1vmin * ${viewport.zoom})`,
-                height: `calc(1vmin * ${viewport.zoom})`,
+                width: '24px',
+                height: '24px',
               }}
               viewBox='0 0 24 24'
               fill='none'
