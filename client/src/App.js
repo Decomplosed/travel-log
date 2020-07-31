@@ -38,7 +38,15 @@ const App = () => {
           offsetTop={-10}
         >
           <div>
-            <img className='marker' src={pinIcon} alt='pin' />
+            <img
+              style={{
+                height: `calc(1vmin * ${viewport.zoom})`,
+                width: `calc(1vmin * ${viewport.zoom})`,
+              }}
+              className='marker'
+              src={pinIcon}
+              alt='pin'
+            />
           </div>
         </Marker>
       ))}
