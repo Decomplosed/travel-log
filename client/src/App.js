@@ -3,7 +3,7 @@ import ReactMapGL, { Marker } from 'react-map-gl';
 
 import { listLogEntries } from './API';
 
-import PinIcon from './icons/map-pin.svg';
+import pinIcon from './icons/pin.jpeg';
 
 const App = () => {
   const [logEntries, setLogEntries] = useState([]);
