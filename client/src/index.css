@@ -10,4 +10,5 @@ body {
 .marker {
   height: 23px;
   width: 24px;
+  transform: translate(-50%, -100%);
 }
