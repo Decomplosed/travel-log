@@ -31,25 +31,28 @@ const App = () => {
       mapStyle='mapbox://styles/decomplosed/ckd3k91gq05ec1iqe5yewo0b9'
     >
       {logEntries.map((entry) => (
-        <Marker
-          key={entry._id}
-          latitude={entry.latitude}
-          longitude={entry.longitude}
-          offsetLeft={-20}
-          offsetTop={-10}
-        >
-          <div>
-            <img
-              style={{
-                height: `calc(1vmin * ${viewport.zoom})`,
-                width: `calc(1vmin * ${viewport.zoom})`,
-              }}
-              className='marker'
-              src={pinIcon}
-              alt='pin'
-            />
-          </div>
-        </Marker>
+        <>
+          <Marker
+            key={entry._id}
+            latitude={entry.latitude}
+            longitude={entry.longitude}
+            offsetLeft={-20}
+            offsetTop={-10}
+          >
+            <div>
+              <img
+                style={{
+                  height: `calc(1vmin * ${viewport.zoom})`,
+                  width: `calc(1vmin * ${viewport.zoom})`,
+                }}
+                className='marker'
+                src={pinIcon}
+                alt='pin'
+              />
+            </div>
+          </Marker>
+          {showPopup[entry._id] ? <Popup></Popup> : ''}
+        </>
       ))}
     </ReactMapGL>
   );
