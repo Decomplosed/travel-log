@@ -51,7 +51,13 @@ const App = () => {
               />
             </div>
           </Marker>
-          {showPopup[entry._id] ? <Popup></Popup> : ''}
+          {showPopup[entry._id] ? (
+            <Popup>
+              <div>You are here!</div>
+            </Popup>
+          ) : (
+            ''
+          )}
         </>
       ))}
     </ReactMapGL>
