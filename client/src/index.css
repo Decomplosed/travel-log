@@ -8,5 +8,6 @@ body {
 }
 
 .marker {
-  stroke: #179ad9;
+  height: 23px;
+  width: 24px;
 }
