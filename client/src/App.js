@@ -39,7 +39,9 @@ const App = () => {
             offsetLeft={-20}
             offsetTop={-10}
           >
-            <div>
+            <div
+              onClick={() => setShowPopup(...showPopup, { [entry._id]: true })}
+            >
               <img
                 style={{
                   height: `calc(1vmin * ${viewport.zoom})`,
