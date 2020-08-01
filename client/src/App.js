@@ -52,7 +52,7 @@ const App = () => {
             </div>
           </Marker>
           {showPopup[entry._id] ? (
-            <Popup>
+            <Popup latitude={entry.latitude} longitude={entry.longitude}>
               <div>You are here!</div>
             </Popup>
           ) : (
