@@ -59,7 +59,9 @@ const App = () => {
               longitude={entry.longitude}
               anchor='top'
             >
-              <div>You are here!</div>
+              <div>
+                <h3>{entry.title}</h3>
+              </div>
             </Popup>
           ) : (
             ''
