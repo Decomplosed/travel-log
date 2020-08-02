@@ -61,6 +61,7 @@ const App = () => {
             >
               <div>
                 <h3>{entry.title}</h3>
+                <p>{entry.comments}</p>
               </div>
             </Popup>
           ) : (
