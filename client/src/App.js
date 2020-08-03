@@ -39,9 +39,7 @@ const App = () => {
             offsetLeft={-20}
             offsetTop={-10}
           >
-            <div
-              onClick={() => setShowPopup(...showPopup, { [entry._id]: true })}
-            >
+            <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <img
                 style={{
                   height: `calc(1vmin * ${viewport.zoom})`,
@@ -58,7 +56,7 @@ const App = () => {
               latitude={entry.latitude}
               longitude={entry.longitude}
               anchor='top'
-              onClose={() => setShowPopup(...showPopup, { [entry._id]: false })}
+              onClose={() => setShowPopup({})}
             >
               <div className='popup'>
                 <h3>{entry.title}</h3>
