@@ -55,6 +55,7 @@ const App = () => {
             <Popup
               latitude={entry.latitude}
               longitude={entry.longitude}
+              closeButton={true}
               anchor='top'
               onClose={() => setShowPopup({})}
             >
