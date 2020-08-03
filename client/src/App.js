@@ -23,6 +23,10 @@ const App = () => {
     })();
   }, []);
 
+  const showAddMarkerPopup = (event) => {
+    console.log(event);
+  };
+
   return (
     <ReactMapGL
       {...viewport}
