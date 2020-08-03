@@ -60,7 +60,7 @@ const App = () => {
               anchor='top'
               onClose={() => setShowPopup(...showPopup, { [entry._id]: false })}
             >
-              <div>
+              <div className='popup'>
                 <h3>{entry.title}</h3>
                 <p>{entry.comments}</p>
               </div>
