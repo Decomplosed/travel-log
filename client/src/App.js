@@ -58,6 +58,7 @@ const App = () => {
               latitude={entry.latitude}
               longitude={entry.longitude}
               anchor='top'
+              onClose={() => setShowPopup(...showPopup, { [entry._id]: false })}
             >
               <div>
                 <h3>{entry.title}</h3>
