@@ -84,6 +84,7 @@ const App = () => {
           )}
         </>
       ))}
+      {addEntryLocation ? <></> : null}
     </ReactMapGL>
   );
 };
