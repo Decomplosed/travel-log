@@ -10,3 +10,7 @@ body {
 .marker {
   transform: translate(-50%, -100%);
 }
+
+.popup {
+  max-width: 300px;
+}
