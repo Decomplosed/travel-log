@@ -25,7 +25,7 @@ const App = () => {
   }, []);
 
   const showAddMarkerPopup = (event) => {
-    const [latitude, longitude] = event.lngLat;
+    const [longitude, latitude] = event.lngLat;
     setAddEntryLocation({
       latitude,
       longitude,
