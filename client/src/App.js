@@ -46,8 +46,6 @@ const App = () => {
             key={entry._id}
             latitude={entry.latitude}
             longitude={entry.longitude}
-            offsetLeft={-20}
-            offsetTop={-10}
           >
             <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <img
