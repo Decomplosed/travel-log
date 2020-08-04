@@ -35,6 +35,16 @@ body {
   width: 100%;
 }
 
+.entry-form button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: #71C0D9;
+  border-radius: 3px;
+  color: #fff;
+}
+
+
 .mapboxgl-popup-content {
   background: #fffbf2;
   border-radius: 5px;
