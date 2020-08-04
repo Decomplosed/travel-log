@@ -93,7 +93,7 @@ const App = () => {
             closeOnClick={true}
             dynamicPosition={true}
             anchor='top'
-            onClose={() => setShowPopup({})}
+            onClose={() => setAddEntryLocation(null)}
           >
             <div className='popup'>
               <h3>{entry.title}</h3>
