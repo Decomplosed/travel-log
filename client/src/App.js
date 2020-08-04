@@ -88,7 +88,7 @@ const App = () => {
             latitude={addEntryLocation.latitude}
             longitude={addEntryLocation.longitude}
           >
-            <div onClick={() => setShowPopup({ [entry._id]: true })}>
+            <div>
               <img
                 style={{
                   height: `${6 * viewport.zoom}px`,
