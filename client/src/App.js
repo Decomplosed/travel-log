@@ -50,8 +50,8 @@ const App = () => {
             <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <img
                 style={{
-                  height: `calc(1vmin * ${viewport.zoom})`,
-                  width: `calc(1vmin * ${viewport.zoom})`,
+                  height: `${6 * viewport.zoom}px`,
+                  width: `${6 * viewport.zoom}px`,
                 }}
                 className='marker'
                 src={pinIcon}
@@ -91,8 +91,8 @@ const App = () => {
             <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <img
                 style={{
-                  height: `calc(1vmin * ${viewport.zoom})`,
-                  width: `calc(1vmin * ${viewport.zoom})`,
+                  height: `${6 * viewport.zoom}px`,
+                  width: `${6 * viewport.zoom}px`,
                 }}
                 className='marker'
                 src={pinIcon}
