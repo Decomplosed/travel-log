@@ -101,7 +101,7 @@ const App = () => {
           >
             <div>
               <svg
-                className='marker yellow'
+                className='marker blue'
                 style={{
                   height: `${6 * viewport.zoom}px`,
                   width: `${6 * viewport.zoom}px`,
