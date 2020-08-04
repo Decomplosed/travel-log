@@ -86,6 +86,24 @@ const App = () => {
       ))}
       {addEntryLocation ? (
         <>
+          <Marker
+            latitude={entry.latitude}
+            longitude={entry.longitude}
+            offsetLeft={-20}
+            offsetTop={-10}
+          >
+            <div onClick={() => setShowPopup({ [entry._id]: true })}>
+              <img
+                style={{
+                  height: `calc(1vmin * ${viewport.zoom})`,
+                  width: `calc(1vmin * ${viewport.zoom})`,
+                }}
+                className='marker'
+                src={pinIcon}
+                alt='pin'
+              />
+            </div>
+          </Marker>
           <Popup
             latitude={addEntryLocation.latitude}
             longitude={addEntryLocation.longitude}
