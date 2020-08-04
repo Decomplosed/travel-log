@@ -85,10 +85,8 @@ const App = () => {
       {addEntryLocation ? (
         <>
           <Marker
-            latitude={entry.latitude}
-            longitude={entry.longitude}
-            offsetLeft={-20}
-            offsetTop={-10}
+            latitude={addEntryLocation.latitude}
+            longitude={addEntryLocation.longitude}
           >
             <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <img
