@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 
 import { listLogEntries } from './API';
+import LogEntryForm from './LogEntryForm'
 
 const App = () => {
   const [logEntries, setLogEntries] = useState([]);
