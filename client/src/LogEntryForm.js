@@ -9,6 +9,8 @@ const LogEntryForm = () => {
       <textarea name='comments' rows={3} />
       <label htmlFor='description'>Description</label>
       <textarea name='description' rows={3} />
+      <label htmlFor='image'>Image</label>
+      <input name='image' />
     </form>
   );
 };
