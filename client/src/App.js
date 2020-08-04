@@ -84,7 +84,27 @@ const App = () => {
           )}
         </>
       ))}
-      {addEntryLocation ? <></> : null}
+      {addEntryLocation ? (
+        <>
+          <Popup
+            latitude={entry.latitude}
+            longitude={entry.longitude}
+            closeButton={true}
+            closeOnClick={true}
+            dynamicPosition={true}
+            anchor='top'
+            onClose={() => setShowPopup({})}
+          >
+            <div className='popup'>
+              <h3>{entry.title}</h3>
+              <p>{entry.comments}</p>
+              <small>
+                Visited on: {new Date(entry.visitDate).toLocaleDateString()}
+              </small>
+            </div>
+          </Popup>
+        </>
+      ) : null}
     </ReactMapGL>
   );
 };
