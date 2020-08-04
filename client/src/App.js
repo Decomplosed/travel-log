@@ -96,11 +96,7 @@ const App = () => {
             onClose={() => setAddEntryLocation(null)}
           >
             <div className='popup'>
-              <h3>{entry.title}</h3>
-              <p>{entry.comments}</p>
-              <small>
-                Visited on: {new Date(entry.visitDate).toLocaleDateString()}
-              </small>
+              <h3>Add your log entry here!</h3>
             </div>
           </Popup>
         </>
