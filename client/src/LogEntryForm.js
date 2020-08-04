@@ -3,8 +3,8 @@ import React from 'react';
 const LogEntryForm = () => {
   return (
     <form>
-      <label>Title</label>
-      <input />
+      <label htmlFor='title'>Title</label>
+      <input name='title' />
     </form>
   );
 };
