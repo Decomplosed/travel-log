@@ -11,6 +11,8 @@ const LogEntryForm = () => {
       <textarea name='description' rows={3} />
       <label htmlFor='image'>Image</label>
       <input name='image' />
+      <label htmlFor='visitDate'>Visit Date</label>
+      <input name='visitDate' type='date' />
     </form>
   );
 };
