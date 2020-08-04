@@ -1,3 +1,5 @@
 import React from 'react';
 
-const LogEntryForm = () => {}
+const LogEntryForm = () => {};
+
+export default LogEntryForm;
