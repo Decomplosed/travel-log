@@ -2,7 +2,7 @@ import React from 'react';
 
 const LogEntryForm = () => {
   return (
-    <form>
+    <form className='entry-form'>
       <label htmlFor='title'>Title</label>
       <input name='title' required />
       <label htmlFor='comments'>Comments</label>
