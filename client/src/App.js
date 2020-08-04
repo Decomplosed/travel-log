@@ -87,8 +87,8 @@ const App = () => {
       {addEntryLocation ? (
         <>
           <Popup
-            latitude={entry.latitude}
-            longitude={entry.longitude}
+            latitude={addEntryLocation.latitude}
+            longitude={addEntryLocation.longitude}
             closeButton={true}
             closeOnClick={true}
             dynamicPosition={true}
