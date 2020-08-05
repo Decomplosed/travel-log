@@ -24,6 +24,7 @@ const LogEntryForm = ({ location }) => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='entry-form'>
+      {error ? <h3>{error}</h3> : null}
       <label htmlFor='title'>Title</label>
       <input name='title' required ref={register} />
       <label htmlFor='comments'>Comments</label>
