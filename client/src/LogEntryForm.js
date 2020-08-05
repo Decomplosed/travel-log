@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const LogEntryForm = () => {
+  const { register, handleSubmit } = useForm();
   return (
     <form className='entry-form'>
       <label htmlFor='title'>Title</label>
