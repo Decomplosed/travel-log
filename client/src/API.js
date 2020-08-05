@@ -13,4 +13,5 @@ export async function createLogEntry(entry) {
       body: JSON.stringify(entry),
     },
   });
+  return response.json();
 }
