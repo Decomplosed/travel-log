@@ -9,7 +9,7 @@ const LogEntryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='entry-form'>
+    <form onSubmit={handleSubmit(onSubmit)} className='entry-form'>
       <label htmlFor='title'>Title</label>
       <input name='title' required ref={register} />
       <label htmlFor='comments'>Comments</label>
