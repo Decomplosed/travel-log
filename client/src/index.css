@@ -20,7 +20,7 @@ body {
 }
 
 .popup {
-  max-width: 400px;
+  width: 30vw;
   padding: 1rem;
   color: #D14545;
   border-radius: 5px;
