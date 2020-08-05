@@ -53,3 +53,7 @@ body {
   background: #fffbf2;
   border-radius: 5px;
 }
+
+.mapboxgl-popup-close-button {
+  font-size: 1.5rem;
+}
