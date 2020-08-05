@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const LogEntryForm = () => {
   const { register, handleSubmit } = useForm();
   return (
-    <form className='entry-form'>
+    <form onSubmit={handleSubmit} className='entry-form'>
       <label htmlFor='title'>Title</label>
       <input name='title' required ref={register} />
       <label htmlFor='comments'>Comments</label>
