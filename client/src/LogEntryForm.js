@@ -17,6 +17,7 @@ const LogEntryForm = ({ location }) => {
       console.log(created);
     } catch (error) {
       console.log(error);
+      setError(error.message);
     }
     setLoading(false);
   };
