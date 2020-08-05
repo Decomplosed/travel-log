@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { createLogEntry } from './API';
 
 const LogEntryForm = ({ location }) => {
+  const [loading, setLoading] = useState(false);
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
