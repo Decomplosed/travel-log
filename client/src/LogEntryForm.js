@@ -8,6 +8,7 @@ const LogEntryForm = ({ location }) => {
 
   const onSubmit = (data) => {
     try {
+      data.latitude = location.latitude
       const created = createLogEntry(data);
       console.log(created);
     } catch (error) {
