@@ -29,7 +29,7 @@ const LogEntryForm = ({ location }) => {
       <input name='image' ref={register} />
       <label htmlFor='visitDate'>Visit Date</label>
       <input name='visitDate' type='date' required ref={register} />
-      <button>Create Travel Log</button>
+      <button>Create Entry</button>
     </form>
   );
 };
