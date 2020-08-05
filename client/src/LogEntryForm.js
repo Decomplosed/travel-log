@@ -3,6 +3,11 @@ import { useForm } from 'react-hook-form';
 
 const LogEntryForm = () => {
   const { register, handleSubmit } = useForm();
+
+  const handleSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <form onSubmit={handleSubmit} className='entry-form'>
       <label htmlFor='title'>Title</label>
