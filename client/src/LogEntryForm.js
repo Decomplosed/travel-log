@@ -6,7 +6,7 @@ import { createLogEntry } from './API';
 const LogEntryForm = ({ location }) => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     try {
       data.latitude = location.latitude;
       data.longitude = location.longitude;
