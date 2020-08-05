@@ -8,7 +8,8 @@ const LogEntryForm = () => {
 
   const onSubmit = (data) => {
     try {
-      
+      const created = createLogEntry(data)
+      console.log(created)
     } catch (error) {
 
     }
