@@ -7,7 +7,11 @@ const LogEntryForm = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    try {
+      
+    } catch (error) {
+
+    }
   };
 
   return (
