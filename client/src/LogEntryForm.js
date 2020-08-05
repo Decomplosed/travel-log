@@ -5,6 +5,7 @@ import { createLogEntry } from './API';
 
 const LogEntryForm = ({ location }) => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
