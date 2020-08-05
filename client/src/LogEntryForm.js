@@ -35,7 +35,7 @@ const LogEntryForm = ({ location }) => {
       <input name='image' ref={register} />
       <label htmlFor='visitDate'>Visit Date</label>
       <input name='visitDate' type='date' required ref={register} />
-      <button>Create Entry</button>
+      <butto disabled={loading}>Create Entry</butto>
     </form>
   );
 };
