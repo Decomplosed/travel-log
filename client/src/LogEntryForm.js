@@ -10,7 +10,7 @@ const LogEntryForm = ({ location }) => {
     try {
       data.latitude = location.latitude;
       data.longitude = location.longitude;
-      const created = createLogEntry(data);
+      const created = await createLogEntry(data);
       console.log(created);
     } catch (error) {
       console.log(error);
