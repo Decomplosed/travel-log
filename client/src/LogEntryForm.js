@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { createLogEntry } from './API';
 
-const LogEntryForm = () => {
+const LogEntryForm = ({ location }) => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
