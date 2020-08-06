@@ -26,6 +26,10 @@ body {
   border-radius: 5px;
 }
 
+.popup img {
+  width: 100%;
+}
+
 .error {
   color: #f05305;
 }
