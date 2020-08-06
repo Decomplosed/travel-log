@@ -18,14 +18,11 @@ const App = () => {
 
   const getEntries = async () => {
     const logEntries = await listLogEntries();
-    setLogEntries(logEntries)
+    setLogEntries(logEntries);
   };
 
   useEffect(() => {
-    (async () => {
-      const logEntries = await listLogEntries();
-      setLogEntries(logEntries);
-    })();
+    getEntries();
   }, []);
 
   const showAddMarkerPopup = (event) => {
