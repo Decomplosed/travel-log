@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 
 import { createLogEntry } from './API';
 
-const LogEntryForm = ({ location }) => {
+const LogEntryForm = ({ location, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const { register, handleSubmit } = useForm();
