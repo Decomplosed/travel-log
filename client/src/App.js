@@ -16,7 +16,10 @@ const App = () => {
     zoom: 4,
   });
 
-  const getEntries = async () => {}
+  const getEntries = async () => {
+    const logEntries = await listLogEntries();
+    setLogEntries(logEntries)
+  };
 
   useEffect(() => {
     (async () => {
