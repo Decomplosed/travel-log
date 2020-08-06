@@ -15,6 +15,7 @@ const LogEntryForm = ({ location, onClose }) => {
       data.longitude = location.longitude;
       const created = await createLogEntry(data);
       console.log(created);
+      onClose()
     } catch (error) {
       console.log(error);
       setError(error.message);
