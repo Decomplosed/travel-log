@@ -135,7 +135,9 @@ const App = () => {
             onClose={() => setAddEntryLocation(null)}
           >
             <div className='popup'>
-              <LogEntryForm onClose={() => {}} location={addEntryLocation} />
+              <LogEntryForm onClose={() => {
+                setAddEntryLocation(null)
+              }} location={addEntryLocation} />
             </div>
           </Popup>
         </>
