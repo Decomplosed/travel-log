@@ -140,6 +140,7 @@ const App = () => {
               <LogEntryForm
                 onClose={() => {
                   setAddEntryLocation(null);
+                  getEntries();
                 }}
                 location={addEntryLocation}
               />
