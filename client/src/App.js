@@ -16,7 +16,7 @@ const App = () => {
     zoom: 4,
   });
 
-  const getEntries = () => {}
+  const getEntries = async () => {}
 
   useEffect(() => {
     (async () => {
