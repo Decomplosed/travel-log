@@ -89,6 +89,7 @@ const App = () => {
                 <small>
                   Visited on: {new Date(entry.visitDate).toLocaleDateString()}
                 </small>
+                {entry.image && <img src={entry.image} alt={entry.title} />}
               </div>
             </Popup>
           ) : (
