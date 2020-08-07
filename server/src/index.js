@@ -1,44 +1,50 @@
-const express = require('express');
-const morgan = require('morgan');
-const helmet = require('helmet');
-const cors = require('cors');
-const mongoose = require('mongoose');
+const { Router } = require('express');
+const RateLimit = require('express-rate-limit');
+const MongoStore = require('rate-limit-mongo');
 
-require('dotenv').config();
+const LogEntry = require('../models/LogEntry');
 
-const middlewares = require('./middlewares');
-const logs = require('./api/logs');
+const {
+  API_KEY,
+  DATABASE_URL,
+} = process.env;
 
-const app = express();
+const router = Router();
 
-mongoose.connect('mongodb://localhost/travel-log', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-app.use(morgan('common'));
-app.use(helmet());
-app.use(
-  cors({
-    origin: 'http://localhost:3000',
+const rateLimitDelay = 10 * 1000; // 10 second delay
+const limiter = new RateLimit({
+  store: new MongoStore({
+    uri: DATABASE_URL,
+    expireTimeMs: rateLimitDelay,
   }),
-);
-app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Hello World!',
-  });
+  max: 1,
+  windowMs: rateLimitDelay
 });
 
-app.use('/api/logs', logs);
-
-app.use(middlewares.notFound);
-
-app.use(middlewares.errorHandler);
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Backend is running on port: ${PORT}`);
+router.get('/', async (req, res, next) => {
+  try {
+    const entries = await LogEntry.find();
+    res.json(entries);
+  } catch (error) {
+    next(error);
+  }
 });
+
+router.post('/', limiter, async (req, res, next) => {
+  try {
+    if (req.get('X-API-KEY') !== API_KEY) {
+      res.status(401);
+      throw new Error('UnAuthorized');
+    }
+    const logEntry = new LogEntry(req.body);
+    const createdEntry = await logEntry.save();
+    res.json(createdEntry);
+  } catch (error) {
+    if (error.name === 'ValidationError') {
+      res.status(422);
+    }
+    next(error);
+  }
+});
+
+module.exports = router;
