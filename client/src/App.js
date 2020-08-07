@@ -50,7 +50,7 @@ const App = () => {
           >
             <div onClick={() => setShowPopup({ [entry._id]: true })}>
               <svg
-                className='marker yellow'
+                className='marker red'
                 style={{
                   height: `${6 * viewport.zoom}px`,
                   width: `${6 * viewport.zoom}px`,
