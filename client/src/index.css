@@ -15,8 +15,8 @@ body {
   fill: #446CCE;
 }
 
-.marker.yellow path {
-  fill: #F3B73E;
+.marker.red path {
+  fill: #D14646;
 }
 
 .popup {
